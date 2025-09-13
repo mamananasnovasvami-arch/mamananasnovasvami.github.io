@@ -1,0 +1,23 @@
+<form>
+  <p>
+    <label for="height">Введите рост:</label>
+    <input type="integer" name="height" id="height" required>
+  </p>
+    <p>
+    <label for="weight">Введите рост:</label>
+    <input type="integer" name="weight" id="weight" required>
+  </p>
+  
+  <button onclick="submit">Отправить</button>
+</form>
+<div id='output'></div>
+<script>
+    function bmi()
+    {
+       const height= document.height.value/100
+       const weight= document.getElementById('weight').value
+       cons index= Math.round(weight/(height*height))
+
+       document.getElementById('output').innerText = 'Ваш ИМТ:'+index
+    }
+</script>
